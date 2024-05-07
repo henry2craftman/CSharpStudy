@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// 컬렉션 스터디를 위한 클래스
 /// </summary>
-public class CollectionStudy : MonoBehaviour
+public class ListStudy : MonoBehaviour
 {
     public InputField input;
     public Text output;
@@ -158,7 +158,6 @@ public class CollectionStudy : MonoBehaviour
                         output.text = "명단에 해당 내용이 존재하지 않습니다.\n";
                 }
             }
-
         }
     }
 }
