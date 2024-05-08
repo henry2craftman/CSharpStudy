@@ -13,9 +13,14 @@ using UnityEngine.UI;
 /// </summary>
 public class DctionaryStudy : MonoBehaviour
 {
+    enum Options
+    {
+        BookName,
+        Location
+    }
+
     [Header("검색 페이지")]
     public GameObject searchPanel;
-    public GameObject registerPanel;
     public TMP_Dropdown dropdown;
     public InputField inputSearch;
     public Button searchBtn;
@@ -23,12 +28,11 @@ public class DctionaryStudy : MonoBehaviour
 
     [Space(20)]
     [Header("등록 페이지")]
-
+    public GameObject registerPanel;
     public InputField inputBookName;
     public InputField inputLocation;
     public Button registerBtn;
     public TMP_Text logRegister;
-
 
     Dictionary<string, string> library = new Dictionary<string, string>();
 
@@ -57,9 +61,11 @@ public class DctionaryStudy : MonoBehaviour
             return;
         }
 
-        library.Add(bookName, location);
-
-        logRegister.text = $"{bookName} is registered on {location}.";
+        bool isExist = library.TryAdd(bookName, location);
+        if(isExist)
+            logRegister.text = $"{bookName} is registered on {location}.";
+        else
+            logRegister.text = $"{bookName} is already registered on {library[bookName]}.";
     }
 
     // 2. 도서검색: 책 제목 또는 위치를 입력받아 결과를 출력
@@ -71,7 +77,7 @@ public class DctionaryStudy : MonoBehaviour
 
         switch (dropdown.value)
         {
-            case 0:
+            case (int)Options.BookName:
                 bookName = inputSearch.text;
 
                 if(bookName == "")
@@ -89,7 +95,7 @@ public class DctionaryStudy : MonoBehaviour
                     logSearch.text = $"No books on the list";
 
                 break;
-            case 1:
+            case (int)Options.Location:
                 location = inputSearch.text;
 
                 if (location == "")
