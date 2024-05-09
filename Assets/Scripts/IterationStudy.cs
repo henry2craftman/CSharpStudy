@@ -26,61 +26,63 @@ public class IterationStudy : MonoBehaviour
 
     void Start()
     {
-        /* 반복문 스터디
-         * //  1.초기화   2.조건   3.증감
-                for(int i = 0; i < 10; i++)
-                    print(i);
+       //반복문 스터디
+       //     1.초기화   2.조건   3.증감
+ /*       for (int i = 0; i < 10; i++)
+        {
+            print(i);
+        }
 
-                // 0 ~ 배열의 길이까지 반복
-                for(int i = 0; i < names.Length; i++)
-                    print(names[i]);
+        // 0 ~ 배열의 길이까지 반복
+        for (int i = 0; i < names.Length; i++)
+            print(names[i]);
 
-                // 배열의 길이 ~ 0까지 반복
-                for (int i = (names.Length - 1); i >= 0; i--)
-                    print(names[i]);
+        // 배열의 길이 ~ 0까지 반복
+        for (int i = (names.Length - 1); i >= 0; i--)
+            print(names[i]);
 
-                // 배열의 길이 ~ 0까지 반복
-                for (int i = 0; i < 10; i++)
-                {
-                    if(i % 2 == 0)
-                        print(i);
+        
+        for (int i = 0; i < 10; i++)
+        {
+            if (i % 2 == 0)
+                print(i);
 
-                    if(i > 5)
-                        break; // 반복문을 종료시키는 키워드
-                }
+            if (i > 5)
+                break; // 반복문을 종료시키는 키워드
+        }
 
-                // 조건을 입력할 필요가 없음
-                foreach(string name in names)
-                    print(name);
+        // 조건을 입력할 필요가 없음
+        foreach (string name in names)
+            print(name);
 
-                // while
-                int number = 0;
-                while(number < 10)
-                {
-                    number++;
-                }
+        // while
+        int number = 0;
+        while (number < 10)
+        {
+            number++;
+        }
 
-                while (true)
-                {
-                    if(number == 10)
-                        break; // 반복문을 종료시키는 키워드
-                }
+        while (true)
+        {
+            if (number == 10)
+                break; // 반복문을 종료시키는 키워드
+        }
 
-                int m0 = 0;
-                while(m0 == 0)
-                {
+        int m0 = 0;
+        while (m0 == 0)
+        {
 
-                }
+        }
 
-                // do-while: 반북문의 조건이 거짓이어도 최소 한번은 실행
-                int num = 0;
-                do
-                {
-                    print(num);
-                    num++;
-                }
-                while (num < 10);
-        */
+        // do-while: 반복문의 조건이 거짓이어도 최소 한번은 실행
+        int num = 0;
+        do
+        {
+            print(num);
+            num++;
+        }
+        while (num < 10);*/
+
 
         logTxt.text = string.Empty;
     }

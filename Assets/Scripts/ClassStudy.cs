@@ -73,6 +73,7 @@ public class ClassStudy : MonoBehaviour // MonoBehaviour(부모 클래스)를 �
             }
 
             Debug.Log(carInfo);
+            // print(carInfo);
         }
     }
 
